@@ -6,14 +6,14 @@ int main() {
 	char name[100];
 	cin.getline(name, 100, '\n');
 
-	cout << "林家绰 ? ";
+	cout << "林家绰?";
 	char address[100];
 	cin.getline(address, 100, '\n');
 
 	cout << "唱捞绰?";
 	int age;
-	cin>>age;
+	cin >> age;
 
-	cout << name<<", "<< address <<", " <<age << "技";
+	cout << name << ", " << address << ", " << age << "\n";
 
 }
