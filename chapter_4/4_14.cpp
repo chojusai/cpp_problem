@@ -19,7 +19,7 @@ public:
 	}
 	
 	bool card_random() {
-		srand((unsigned int)time(0));
+		
 		cout << '\t' << '\t';
 		for (int i = 0; i < 3; i++) {
 			card[i] = rand() % 3;
@@ -46,11 +46,11 @@ class GamlingGame {
 	string enter;
 public:
 	void play() {
-		cout << "***** °×ºí¸µ °ÔÀÓÀ» ½ÃÀÛÇÕ´Ï´Ù. *****" << endl;
-		cout << "Ã¹¹øÂ° ¼±¼ö ÀÌ¸§>>";
+		cout << "***** ê²œë¸”ë§ ê²Œìž„ì„ ì‹œìž‘í•©ë‹ˆë‹¤. *****" << endl;
+		cout << "ì²«ë²ˆì§¸ ì„ ìˆ˜ ì´ë¦„>>";
 		cin >> name;
 		player[0] = Player(name);
-		cout << "µÎ¹øÂ° ¼±¼ö ÀÌ¸§>>";
+		cout << "ë‘ë²ˆì§¸ ì„ ìˆ˜ ì´ë¦„>>";
 		cin >> name;
 		player[1] = Player(name);
 		getchar();
@@ -62,10 +62,10 @@ public:
 			getchar();
 			if (player[i % 2].card_random()) {
 				victory = true;
-				cout << player[i % 2].getname() << "´Ô ½Â¸®!!"<<endl;
+				cout << player[i % 2].getname() << "ë‹˜ ìŠ¹ë¦¬!!"<<endl;
 			}
 			else {
-				cout << "¾Æ½±±º¿ä!" << endl;
+				cout << "ì•„ì‰½êµ°ìš”!" << endl;
 			}
 			i++;
 		}
@@ -75,7 +75,7 @@ public:
 
 
 int main() {
-	
+	srand((unsigned int)time(0));
 	GamlingGame g;
 	g.play();
 	g.game();
